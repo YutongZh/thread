@@ -49,6 +49,7 @@ public class CyclicBarrierDemo implements Runnable{
                         TimeUnit.MILLISECONDS.sleep(100L);
                         System.out.println(Thread.currentThread().getName() + "线程已开放...");
                         cyclicBarrier.await();
+                        System.out.println("开始加入");
                         resultMap.put(Thread.currentThread().getName(), 1);
                     } catch (InterruptedException | BrokenBarrierException e) {
                         e.printStackTrace();
